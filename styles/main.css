@@ -1,0 +1,10 @@
+#forecast{
+  list-style: none;
+}
+#forecast li{
+  border: 1px solid black;
+  width: 150px;
+  display: inline-block;
+  margin: 10px;
+  text-align: center;
+}
