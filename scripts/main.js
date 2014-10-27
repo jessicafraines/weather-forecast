@@ -36,7 +36,9 @@ function showData(data){
   var city = data.location.city;
   addCity(city);
 }
-/*document.addEventListener('DOMContentLoaded', function(){
+
+document.addEventListener('DOMContentLoaded', function(){
+
   var $form = document.getElementById('enterZip');
   var $zipBox = $form.querySelector('input[type=text]');
   $form.addEventListener('submit', function(event){
@@ -44,15 +46,7 @@ function showData(data){
   var url = 'http://api.wunderground.com/api/067e021a41cde59a/geolookup/forecast10day/q/' + $zipBox.value + '.json';
   getJSONP(url, 'showData')
   });
-});*/
 
-
-
-//THIS WILL ND TO BE USED IN "ELSE" STATEMENT IF USER SELECTS FIND BY CURRENT LOCATION
-//
-
-
-document.addEventListener('DOMContentLoaded', function(){
 
   var options = {
     enableHighAccuracy: true,
@@ -67,12 +61,11 @@ document.addEventListener('DOMContentLoaded', function(){
     getJSONP(geoUrl, 'showData')
   }; 
   function error(err) {
-    debugger;
     alert(err);
   };
 
-  var $form = document.getElementById('geoLocation');
-  $form.addEventListener('submit', function(event){
+  var $form2 = document.getElementById('geoLocation');
+  $form2.addEventListener('submit', function(event){
     event.preventDefault();
     navigator.geolocation.getCurrentPosition(success, error, options);
   });
