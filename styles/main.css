@@ -1,3 +1,12 @@
+@import url(http://fonts.googleapis.com/css?family=Inconsolata);
+
+body{
+  font-family: 'Inconsolata';
+  text-align: center;
+  background-image: url("/img/blurred-lake.jpg");
+  background-color: #00bfff;
+}
+
 #forecast{
   list-style: none;
 }
@@ -7,4 +16,8 @@
   display: inline-block;
   margin: 10px;
   text-align: center;
+}
+img#logo{
+  height: 30px;
+  width: 150px;
 }

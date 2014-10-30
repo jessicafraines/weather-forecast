@@ -54,6 +54,7 @@ document.addEventListener('DOMContentLoaded', function(){
     maximumAge: 0
   };
   function success(pos) {
+    console.log('POS', pos);
     var crd = pos.coords;
     var lat = crd.latitude;
     var lon = crd.longitude;
@@ -61,12 +62,13 @@ document.addEventListener('DOMContentLoaded', function(){
     getJSONP(geoUrl, 'showData')
   }; 
   function error(err) {
-    alert(err);
+    alert('Yo, not working');
   };
 
   var $form2 = document.getElementById('geoLocation');
   $form2.addEventListener('submit', function(event){
     event.preventDefault();
+    console.log('success', success);
     navigator.geolocation.getCurrentPosition(success, error, options);
   });
 });
